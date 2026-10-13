@@ -30,6 +30,10 @@ app.post('/vacancies', (req, res)=>{
 
 
     // enciende el servidor
+    if (require.main === module){
 app.listen(PORT, ()=>{
     console.log(`Servidor escuchando en http://localhost:${PORT}`);
 });
+    }
+
+    modelu .exports = app;
