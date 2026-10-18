@@ -18,8 +18,9 @@ app.get('/vacancies', (req, res)=>{
 // endopoint -post
 app.post('/vacancies', (req, res)=>{
     const {title, company, mode, salary }= req.body;
+    
     if (!title || !company ){
-        return res.status(400).json({error: "Titutlo y empresa son obligatorios"});
+        return res.status(400).json({error: 'Titulo y empresa son obligatorios'});
     }
 
     // nuevo objeto para el arreglo
@@ -36,4 +37,5 @@ app.listen(PORT, ()=>{
 });
     }
 
-    modelu .exports = app;
+    module.exports = app;
+
